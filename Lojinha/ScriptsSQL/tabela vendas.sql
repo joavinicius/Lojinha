@@ -1,0 +1,27 @@
+use dblojinha
+go
+
+
+CREATE TABLE VENDAS(
+[CODIGO] [INT] IDENTITY (1,1) NOT NULL,
+DATA DATETIME,
+QUANTIDADE INT,
+FATURADO BIT, 
+CODIGOCLIENTE INT,
+CODIGOPRODUTO INT,
+CONSTRAINT [PK_VENDAS] PRIMARY KEY CLUSTERED
+(
+    [CODIGO]
+    ) ON [PRIMARY],  CONSTRAINT [FK_Codigo_Cliente] Foreign Key
+    (
+    [CODIGOCLIENTE]
+    ) REFERENCES [Clientes] ([Codigo]
+), 
+CONSTRAINT [FK_Codigo_Produto] Foreign Key
+(
+[CODIGOPRODUTO]
+) REFERENCES [Produtos] (
+  [Codigo]
+  )
+) on [PRIMARY]
+GO

@@ -1,0 +1,3 @@
+--Criacao do banco de dados
+--create database dblojinha;
+--use dblojinha;
